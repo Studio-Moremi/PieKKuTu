@@ -97,26 +97,6 @@ Server.use((req, res, next) => {
 		next();
 	}
 });
-//볕뉘 수정 끝
-/* use this if you want
-
-DDDoS = new DDDoS({
-	maxWeight: 6,
-	checkInterval: 10000,
-	rules: [{
-		regexp: "^/(cf|dict|gwalli)",
-		maxWeight: 20,
-		errorData: "429 Too Many Requests"
-	}, {
-		regexp: ".*",
-		errorData: "429 Too Many Requests"
-	}]
-});
-DDDoS.rules[0].logFunction = DDDoS.rules[1].logFunction = function(ip, path){
-	JLog.warn(`DoS from IP ${ip} on ${path}`);
-};
-Server.use(DDDoS.express());*/
-
 WebInit.init(Server, true);
 DB.ready = function(){
 	setInterval(function(){
