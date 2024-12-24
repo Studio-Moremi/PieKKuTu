@@ -1,33 +1,25 @@
 {
     "name": "piekkutu",
-    "description": "Rule the words! piekkutu.",
+    "version": "1.0.0",
+    "description": "끝말잇기를 새롭게! 파이끄투",
+    "main": "index.js",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "css:build": "postcss src/public/css/portal.css -o src/public/css/portal.build.css"
+    },
     "dependencies": {
-        "express": "^4.21.2",
-        "ws": "^8.18.0",
-        "wss": "^3.3.4",
-        "cluster": "^0.7.7",
-        "http": "0.0.1-security",
-        "helmet": "^8.0.0",
-        "cors": "2.8.5",
-        "morgan": "1.10.0",
-        "body-parser": "1.20.3",
-        "compression": "1.7.5",
-        "dotenv": "16.4.7",
-        "https": "^1.0.0"
-        
+      "next": "latest",
+      "react": "latest",
+      "react-dom": "latest"
     },
     "devDependencies": {
-        "tailwindcss": "^3.4.17",
-        "postcss": "^8.4.49",
-        "autoprefixer": "^10.4.20",
-        "next.js": "1.0.3",
-        "tsconfig": "7.0.0",
-        "babel": "^6.23.0",
-        "prettier": "3.4.2"
-    },
-    "scripts": {
-        "start": "node Web/cluster.js"
-    },
-    "author": { "email": "mulmando1991@gmail.com", "name": "cookedas1", "url": "https://github.com/cookedas1" },
-    "license": "GPL-3.0-only"
-}
+      "typescript": "^5.0.0",
+      "eslint": "latest",
+      "eslint-config-next": "latest",
+      "prettier": "latest"
+    }
+  }
+  

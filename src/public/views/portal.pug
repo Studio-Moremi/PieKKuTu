@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 파이끄투 - 메인
+    link(rel="stylesheet" href="/css/portal.css")
+  body
+    header.navbar
+      a.logo(href="/") 파이끄투
+      a.discord(href="https://discord.gg/eMrZFCk3Xa" target="_blank") 디스코드
+      button.login(onclick="alert('아직은 구현 중')") 로그인
+    
+    main.container
+      section.notice
+        h2 공지사항
+        include anc.pug
+
+      section.start
+        button.start-btn 게임 시작
+
+    footer.footer
+      p 끝말잇기를 새롭게! 파이끄투 Copyright (C) Studio Moremi 2024~
+      p 이메일: op@kkutu.store
+    
+    script(src="/js/portal.js")

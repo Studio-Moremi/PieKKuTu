@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './after/header.css';
+@import './after/footer.css';
+@import './after/buttons.css';
+@import './after/animations.css';
+
+body {
+  font-family: 'Arial', sans-serif;
+  @apply bg-gray-100 text-gray-800;
+}
+
+.navbar {
+  @apply flex justify-between items-center p-4 bg-blue-500 text-white shadow-md;
+}
+
+.logo, .discord, .login {
+  @apply text-lg font-bold hover:underline;
+}
+
+.start-btn {
+  @apply px-6 py-4 text-xl bg-green-500 text-white rounded-lg shadow-lg transition-transform duration-200;
+}
+
+.start-btn:hover {
+  @apply scale-105;
+}
+
+.notice {
+  @apply p-4 bg-white shadow rounded-lg my-4;
+}
+
+.footer {
+  @apply text-center p-4 text-sm bg-gray-800 text-white mt-10;
+}
