@@ -3,14 +3,16 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title 파이끄투 - 메인
+    title 끝말잇기를 새롭게! 파이끄투
     link(rel="stylesheet" href="/css/portal.css")
   body
     header.navbar
       a.logo(href="/") 파이끄투
-      a.discord(href="https://discord.gg/eMrZFCk3Xa" target="_blank") 디스코드
-      button.login(onclick="alert('아직은 구현 중')") 로그인
-    
+      if !userLoggedIn
+        a.discord(href="/login/discord") 디스코드 로그인
+      else
+        button.login(onclick="openLoginModal()") 닉네임 비설정
+
     main.container
       section.notice
         h2 공지사항
@@ -22,5 +24,12 @@ html(lang="en")
     footer.footer
       p 끝말잇기를 새롭게! 파이끄투 Copyright (C) Studio Moremi 2024~
       p 이메일: op@kkutu.store
-    
+
+    div.modal#loginModal(style="display:none")
+      div.modal-content
+        h3 닉네임 설정하기
+        p 닉네임에 특수문자를 사용할 수 없어요. 욕설 및 비속어도 사용할 수 없어요. 최소 3자 최대 15자입니다.
+        input#nickname(type="text" placeholder="닉네임을 입력해주세요" required)
+        button#confirmBtn(onclick="setNickname()") 확인
+        button.cancel(onclick="closeLoginModal()") 취소
     script(src="/js/portal.js")
