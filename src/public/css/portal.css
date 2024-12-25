@@ -35,3 +35,45 @@ body {
 .footer {
   @apply text-center p-4 text-sm bg-gray-800 text-white mt-10;
 }
+
+.login, .discord {
+  @apply px-6 py-3 text-xl bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300;
+}
+
+#loginModal {
+  @apply fixed inset-0 flex items-center justify-center bg-black bg-opacity-50;
+}
+
+.modal-content {
+  @apply bg-white p-8 rounded-lg shadow-lg w-96;
+  background: linear-gradient(to right, #6EE7B7, #3B82F6);
+}
+
+input[type="text"] {
+  @apply p-2 border border-gray-300 rounded-md w-full mt-4;
+}
+
+button {
+  @apply py-2 px-4 rounded-md mt-4 text-white transition duration-300;
+}
+
+button#confirmBtn {
+  @apply bg-green-500 hover:bg-green-600;
+  animation: pressAnimation 0.3s ease-in-out;
+}
+
+button.cancel {
+  @apply bg-gray-400 hover:bg-gray-500;
+}
+
+@keyframes pressAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
